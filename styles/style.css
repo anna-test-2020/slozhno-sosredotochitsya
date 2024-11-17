@@ -5,6 +5,49 @@
   max-width: 1024px; /*удалить*/
 }
 
+.header {
+  min-height: 668px;
+  padding: 10px;
+  display: grid;
+}
+
+.header__title {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  font-weight: bold;
+  color: #db00ff;
+  text-shadow: 4px 4px 0 #FF0070;
+  /* text-shadow: 4px 4px 0 var(--accent-color); */
+
+  /* Для мобильных */
+/* clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) */
+
+/* Для планшета и десктопа */
+/* clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)  */
+}
+
+.header__text {
+  margin: 55px 0;
+
+}
+.title-decor{
+  /* Параграфу в шапке задан фоновый цвет. Такой же декоративный приём встречается в основном блоке сайта. Используйте отдельный класс title-decor, чтобы удобно задавать фон и цвет текста всем схожим элементам. */
+}
+.two-col {
+  display: grid;
+  grid-template-columns:  1fr 2fr;
+  gap: 20px;
+
+}
+
+.snijaet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
 .gallery {
   display: grid;
   gap: 20px;
