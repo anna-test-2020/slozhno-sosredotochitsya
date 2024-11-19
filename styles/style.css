@@ -1,54 +1,199 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  max-width: 1024px; /*удалить*/
+  max-width: 1024px;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--main-font, sans-serif);
+  font-size: var(--text-size);
+  line-height: var(--text-line-height);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
+/* для смены цветовых схем используется подход через 
+задание класса контейнеру страницы и 
+медиавыражение с prefers-color-scheme; */
+
+h2 {
+  color: var(--section-title);
+  font-size: var(--text-size);
+  font-weight: bold;
+  line-height: var(--text-line-height);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: var(--text-size);
+  font-weight: bold;
+  line-height: var(--text-line-height);
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: var(--text-size);
+  font-weight: normal;
+  line-height: var(--text-line-height);
+  margin-bottom: 10px;
+}
+
+.section-padding {
+  padding: var(--section-padding);
+}
+
+.main__section:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.main__section li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+p a {
+  text-shadow: 2px 1px 0 var(--link-shadow-color);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+p a:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.header__decor{
+  display: none;
+}
+
 
 .header {
   min-height: 668px;
-  padding: 10px;
+  /* height: 100vh; */
+  padding: var(--section-padding);
   display: grid;
+  grid-template-rows: 1fr 193px 1fr;
+  /* background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center; */
+  position: relative;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--border-coner-color);
+  border-right: 1px solid var(--border-coner-color);
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: "";
+  left: 10px;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--border-coner-color);
+  border-bottom: 1px solid var(--border-coner-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  appearance: none;
+  text-transform: lowercase;
+  background-color: transparent;
+  color: var(--menu-color);
+  border: 1px solid transparent;
+  padding: 4px 13px 7px;
+  line-height: 1;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-border-menu-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
 }
 
 .header__title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--main-font), sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
+  line-height:  var(--main-title-line-height);
   font-weight: bold;
-  color: #db00ff;
-  text-shadow: 4px 4px 0 #FF0070;
-  /* text-shadow: 4px 4px 0 var(--accent-color); */
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 
   /* Для мобильных */
-/* clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) */
+  /* clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) */
 
-/* Для планшета и десктопа */
-/* clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)  */
+  /* Для планшета и десктопа */
+  /* clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)  */
 }
 
 .header__text {
-  margin: 55px 0;
-
+  margin: 0;
+  font-weight: bold;
+  align-self: center;
 }
-.title-decor{
+.title-decor {
+  background-color: var(--title-decor-bg);
+  color: var(--title-decor-color);
   /* Параграфу в шапке задан фоновый цвет. Такой же декоративный приём встречается в основном блоке сайта. Используйте отдельный класс title-decor, чтобы удобно задавать фон и цвет текста всем схожим элементам. */
 }
+
+.content {
+  padding: 40px 0;
+}
+
 .two-col {
   display: grid;
-  grid-template-columns:  1fr 2fr;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
-
 }
 
-.snijaet {
+@media (width <= 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.what__list {
+  /* padding:  var(--section-padding); */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  /* gap: 20px; */
 }
 
+@media (width <= 768px) {
+  .what__list {
+    grid-template-columns: 1fr;
+  }
+}
 
-.gallery {
+.gallery__content {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
@@ -59,7 +204,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 .g1 {
   grid-column: span 2;
@@ -73,4 +217,22 @@
 
 .g5 {
   grid-column: span 2;
+}
+
+.footer {
+  min-height: 667px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* height: 100vh; */
+}
+
+.footer__title {
+  font-family: var(--main-font), sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: var(--main-title-line-height);
+  font-weight: bold;
+  color: var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

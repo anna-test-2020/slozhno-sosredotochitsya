@@ -2,3 +2,94 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --main-font: 'IBM Plex mono';
+  --section-padding: 10px;
+  --text-size: 18px;
+  --text-line-height: 130%;
+  --main-title-line-height: 82.5%;
+}
+
+
+:root.theme-dark {
+/* Дублируем переменные для тёмной темы */
+--bg-color: #000028;
+--main-title-color: #db00ff;
+--text-color: #f1b2ce;
+--accent-color: #ff0070;
+--border-coner-color: #ff0070;
+--title-decor-bg: #ff0070;
+--section-title: #ff0070;
+--link-shadow-color: #ff0070;
+--menu-color: rgb(255 0 112);
+--hover-border-menu-color: rgb(255 0 112 / 40%);
+--title-decor-color: #000028;
+--bg-image: url(../images/cover-image-dark.png);
+}
+
+/* Остальные стили */ 
+
+.page.theme_dark {
+  --bg-color: #000028;
+  --main-title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --border-coner-color: #ff0070;
+  --title-decor-bg: #ff0070;
+  --section-title: #ff0070;
+  --link-shadow-color: #ff0070;
+  --menu-color: rgb(255 0 112);
+  --hover-border-menu-color: rgb(255 0 112 / 40%);
+  --title-decor-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+}
+
+/* для смены цветовых схем используется подход через задание класса контейнеру страницы и медиавыражение с prefers-color-scheme; */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --bg-color: #000028;
+    --main-title-color: #db00ff;
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --border-coner-color: #ff0070;
+    --title-decor-bg: #ff0070;
+    --section-title: #ff0070;
+    --link-shadow-color: #ff0070;
+    --menu-color: rgb(255 0 112);
+    --hover-border-menu-color: rgb(255 0 112 / 40%);
+    --title-decor-color: #000028;
+    --bg-image: url(../images/cover-image-dark.png);    
+  }
+}
+
+.page.theme_dark .header__decor {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  width: auto;
+  height: auto;
+  color: var(--accent-color);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.page.theme_dark .header__decor::after {
+  content: "";
+  background-color: var(--accent-color);
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+
+
+
+
+
+

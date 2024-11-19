@@ -5,8 +5,53 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #fff1f7;
+  --main-title-color: #ffc2e6;
+  --text-color: #353430;
+  --accent-color: #FF0070;
+  --title-decor-bg: #ff8dcb;
+  --title-decor-color: #353430;
+  --section-title: #353430;
+  --border-coner-color: #353430;
+  --menu-color: rgb(53 52 48);
+  --hover-border-menu-color: rgb(53 52 48 / 40%);
+  --link-shadow-color: #ff8dcb;
+  --bg-image: url(../images/cover-image-light.png);
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff1f7;
+    --main-title-color: #ffc2e6;
+    --text-color: #353430;
+    --accent-color: #FF0070;
+    --title-decor-bg: #ff8dcb;
+    --title-decor-color: #353430;
+    --section-title: #353430;
+    --border-coner-color: #353430;
+    --menu-color: rgb(53 52 48);
+    --hover-border-menu-color: rgb(53 52 48 / 40%);
+    --link-shadow-color: #ff8dcb;
+    --bg-image: url(../images/cover-image-light.png);
+  }
+
+  .page.theme_light .header__decor{
+    display: none;
+  }
+}
+
+.page.theme_light .header__decor{
+    display: none;
+  }
+
+  /* Файл light.css: */
+:root.theme-light {
+  /* Переменные светлой темы */    
+}
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+:root {
+        /* Дублируем переменные светлой темы */        }
+}
+/* Остальные стили */ 
