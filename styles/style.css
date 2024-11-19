@@ -56,6 +56,7 @@ h4 {
 p a {
   text-shadow: 2px 1px 0 var(--link-shadow-color);
   text-decoration: none;
+  cursor: pointer;
 }
 
 p a:hover {
@@ -77,9 +78,6 @@ p a:focus-visible {
   padding: var(--section-padding);
   display: grid;
   grid-template-rows: 1fr 193px 1fr;
-  /* background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center; */
   position: relative;
 }
 
@@ -123,6 +121,7 @@ p a:focus-visible {
   border: 1px solid transparent;
   padding: 4px 13px 7px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
