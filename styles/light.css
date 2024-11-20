@@ -8,7 +8,7 @@
   --bg-color: #fff1f7;
   --main-title-color: #ffc2e6;
   --text-color: #353430;
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
   --title-decor-bg: #ff8dcb;
   --title-decor-color: #353430;
   --section-title: #353430;
@@ -24,7 +24,7 @@
     --bg-color: #fff1f7;
     --main-title-color: #ffc2e6;
     --text-color: #353430;
-    --accent-color: #FF0070;
+    --accent-color: #ff0070;
     --title-decor-bg: #ff8dcb;
     --title-decor-color: #353430;
     --section-title: #353430;
@@ -35,27 +35,24 @@
     --bg-image: url(../images/cover-image-light.png);
   }
 
-  .page.theme_light .header__decor{
+  .page.theme_light .header__decor {
     display: none;
   }
 }
 
-.page.theme_light .header__decor{
-    display: none;
-  }
+.page.theme_light .header__decor {
+  display: none;
+}
 
-
-
-  
-  
-  /* Файл light.css: */
+/* Файл light.css: */
 :root.theme-light {
-  /* Переменные светлой темы */    
+  /* Переменные светлой темы */
 }
 /* Остальные стили */
 
 @media (prefers-color-scheme: light) {
-:root {
-        /* Дублируем переменные светлой темы */        }
+  :root {
+    /* Дублируем переменные светлой темы */
+  }
 }
-/* Остальные стили */ 
+/* Остальные стили */

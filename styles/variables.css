@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font: 'IBM Plex mono';
+  --main-font: "IBM Plex mono";
   --content-padding: 40px 0;
   --header-padding: 10px;
   --decorated-zone-gap: 10px;
@@ -14,34 +14,34 @@
 }
 
 @media (width >= 768px) {
-:root {
-  --header-padding: 20px;
-  --content-padding: 60px 0;
-  --decorated-zone-gap: 20px;
-  --section-padding: 0 20px;
-  --text-size: 18px;
-  --text-line-height: 130%;
-  --main-title-line-height: 82.5%;
-}
+  :root {
+    --header-padding: 20px;
+    --content-padding: 60px 0;
+    --decorated-zone-gap: 20px;
+    --section-padding: 0 20px;
+    --text-size: 18px;
+    --text-line-height: 130%;
+    --main-title-line-height: 82.5%;
+  }
 }
 
 :root.theme-dark {
-/* Дублируем переменные для тёмной темы */
---bg-color: #000028;
---main-title-color: #db00ff;
---text-color: #f1b2ce;
---accent-color: #ff0070;
---border-coner-color: #ff0070;
---title-decor-bg: #ff0070;
---section-title: #ff0070;
---link-shadow-color: #ff0070;
---menu-color: rgb(255 0 112);
---hover-border-menu-color: rgb(255 0 112 / 40%);
---title-decor-color: #000028;
---bg-image: url(../images/cover-image-dark.png);
+  /* Дублируем переменные для тёмной темы */
+  --bg-color: #000028;
+  --main-title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --border-coner-color: #ff0070;
+  --title-decor-bg: #ff0070;
+  --section-title: #ff0070;
+  --link-shadow-color: #ff0070;
+  --menu-color: rgb(255 0 112);
+  --hover-border-menu-color: rgb(255 0 112 / 40%);
+  --title-decor-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
-/* Остальные стили */ 
+/* Остальные стили */
 
 .page.theme_dark {
   --bg-color: #000028;
@@ -73,11 +73,10 @@
     --menu-color: rgb(255 0 112);
     --hover-border-menu-color: rgb(255 0 112 / 40%);
     --title-decor-color: #000028;
-    --bg-image: url(../images/cover-image-dark.png);    
+    --bg-image: url(../images/cover-image-dark.png);
   }
 }
-
-.page.theme_dark .header__decor {
+.header__decor {
   position: absolute;
   right: 20px;
   top: 13px;
@@ -92,13 +91,13 @@
 }
 
 @media (width >= 768px) {
-.page.theme_dark .header__decor {
-  right: 30px;
-  top: 20px;
-}
+  .header__decor {
+    right: 30px;
+    top: 20px;
+  }
 }
 
-.page.theme_dark .header__decor::after {
+.header__decor::after {
   content: "";
   background-color: var(--accent-color);
   width: 9px;
@@ -107,10 +106,3 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
-
-
-
-
-
-
-
