@@ -4,12 +4,26 @@
 */
 :root {
   --main-font: 'IBM Plex mono';
-  --section-padding: 10px;
+  --content-padding: 40px 0;
+  --header-padding: 10px;
+  --decorated-zone-gap: 10px;
+  --section-padding: 0 10px;
   --text-size: 18px;
   --text-line-height: 130%;
   --main-title-line-height: 82.5%;
 }
 
+@media (width >= 768px) {
+:root {
+  --header-padding: 20px;
+  --content-padding: 60px 0;
+  --decorated-zone-gap: 20px;
+  --section-padding: 0 20px;
+  --text-size: 18px;
+  --text-line-height: 130%;
+  --main-title-line-height: 82.5%;
+}
+}
 
 :root.theme-dark {
 /* Дублируем переменные для тёмной темы */
@@ -75,6 +89,13 @@
   align-items: center;
   gap: 10px;
   justify-content: space-between;
+}
+
+@media (width >= 768px) {
+.page.theme_dark .header__decor {
+  right: 30px;
+  top: 20px;
+}
 }
 
 .page.theme_dark .header__decor::after {
