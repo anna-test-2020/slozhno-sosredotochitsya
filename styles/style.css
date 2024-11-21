@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   max-inline-size: 1024px; /* Удалить */
   inline-size: 100%;
@@ -14,10 +12,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* для смены цветовых схем используется подход через 
-задание класса контейнеру страницы и 
-медиавыражение с prefers-color-scheme; */
 
 h2 {
   color: var(--section-title);
@@ -84,13 +78,12 @@ p a:focus-visible {
   position: relative;
 }
 
-/*------------------------*/
 .header__decor {
   position: absolute;
-  right: 19px;
-  top: 11px;
-  width: auto;
-  height: auto;
+  inset-inline-end: 19px;
+  inset-block-start: 11px;
+  inline-size: auto;
+  block-size: auto;
   color: var(--accent-color);
   font-size: 18px;
   display: flex;
@@ -101,8 +94,8 @@ p a:focus-visible {
 
 @media (width >= 768px) {
   .header__decor {
-    right: 29px;
-    top: 24px;
+    inset-inline-end: 29px;
+    inset-block-start: 24px;
     line-height: 1;
   }
 }
@@ -110,19 +103,18 @@ p a:focus-visible {
 .header__decor::after {
   content: "";
   background-color: var(--accent-color);
-  width: 9px;
-  height: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   flex: 0 0 9px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
-/*------------------------*/
 
 .decorated-zone::before {
   position: absolute;
   content: "";
-  right: var(--decorated-zone-gap);
-  top: var(--decorated-zone-gap);
+  inset-inline-end: var(--decorated-zone-gap);
+  inset-block-start: var(--decorated-zone-gap);
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--border-coner-color);
@@ -132,8 +124,8 @@ p a:focus-visible {
 .decorated-zone::after {
   position: absolute;
   content: "";
-  left: var(--decorated-zone-gap);
-  bottom: var(--decorated-zone-gap);
+  inset-inline-start: var(--decorated-zone-gap);
+  inset-block-end: var(--decorated-zone-gap);
   inline-size: 25px;
   block-size: 25px;
   border-inline-start: 1px solid var(--border-coner-color);
@@ -210,9 +202,6 @@ p a:focus-visible {
   line-height: var(--main-title-line-height);
   font-weight: bold;
   color: var(--main-title-color);
-}
-
-.header__title {
   text-shadow: 4px 4px 0 var(--main-title-shadow-color);
 }
 
@@ -230,7 +219,7 @@ p a:focus-visible {
 
 @media (width >= 768px) {
   .header__text {
-    width: 50%;
+    inline-size: 50%;
     justify-self: end;
   }
 }
@@ -318,9 +307,9 @@ p a:focus-visible {
 }
 
 .gallery__image {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
   object-fit: cover;
   display: block;
 }
@@ -332,10 +321,4 @@ p a:focus-visible {
   justify-content: center;
   position: relative;
   /* block-size: 100vh; */
-}
-
-@media (width >= 768px) {
-.footer__title {
-  text-shadow: 2px 2px 0 var(--main-title-shadow-color);
-}
 }
