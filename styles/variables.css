@@ -3,106 +3,57 @@
   и их переопределение под различные устройства
 */
 :root {
+  /* шрифты */
   --main-font: "IBM Plex mono";
+  --site-name-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --text-size: 18px;
+  --text-line-height: 130%;
+  --main-title-line-height: 82.5%;
+  /* размеры */
+  --header-min-block-size: 668px;
+  --header-grid-rows: 1fr 191px 1fr;
   --content-padding: 40px 0;
   --header-padding: 10px;
   --decorated-zone-gap: 10px;
   --section-padding: 0 10px;
-  --text-size: 18px;
-  --text-line-height: 130%;
-  --main-title-line-height: 82.5%;
+  --main__section-mb: 50px;
+
+  /* цвета */
+  --bg-color: #000028;
+  --main-title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --border-coner-color: #ff0070;
+  --title-decor-bg: #ff0070;
+  --section-title: #ff0070;
+  --link-shadow-color: #ff0070;
+  --menu-color: rgb(255 0 112);
+  --hover-border-menu-color: rgb(255 0 112 / 40%);
+  --title-decor-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
 @media (width >= 768px) {
   :root {
+    /* шрифты */
+    --site-name-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    /* размеры */
+    --header-min-block-size: 1024px;
+    --header-grid-rows: 1fr 99px 1fr;
     --header-padding: 20px;
     --content-padding: 60px 0;
     --decorated-zone-gap: 20px;
     --section-padding: 0 20px;
+    --main__section-mb: 80px;
     --text-size: 18px;
     --text-line-height: 130%;
     --main-title-line-height: 82.5%;
   }
 }
 
-:root.theme-dark {
-  /* Дублируем переменные для тёмной темы */
-  --bg-color: #000028;
-  --main-title-color: #db00ff;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --border-coner-color: #ff0070;
-  --title-decor-bg: #ff0070;
-  --section-title: #ff0070;
-  --link-shadow-color: #ff0070;
-  --menu-color: rgb(255 0 112);
-  --hover-border-menu-color: rgb(255 0 112 / 40%);
-  --title-decor-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-}
-
-/* Остальные стили */
-
-.page.theme_dark {
-  --bg-color: #000028;
-  --main-title-color: #db00ff;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --border-coner-color: #ff0070;
-  --title-decor-bg: #ff0070;
-  --section-title: #ff0070;
-  --link-shadow-color: #ff0070;
-  --menu-color: rgb(255 0 112);
-  --hover-border-menu-color: rgb(255 0 112 / 40%);
-  --title-decor-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-}
-
-/* для смены цветовых схем используется подход через задание класса контейнеру страницы и медиавыражение с prefers-color-scheme; */
-@media (prefers-color-scheme: dark) {
+@media (width >= 1024px) {
   :root {
-    /* Дублируем переменные светлой темы */
-    --bg-color: #000028;
-    --main-title-color: #db00ff;
-    --text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --border-coner-color: #ff0070;
-    --title-decor-bg: #ff0070;
-    --section-title: #ff0070;
-    --link-shadow-color: #ff0070;
-    --menu-color: rgb(255 0 112);
-    --hover-border-menu-color: rgb(255 0 112 / 40%);
-    --title-decor-color: #000028;
-    --bg-image: url(../images/cover-image-dark.png);
+    --header-min-block-size: 768px;
+    --header-grid-rows: 1fr 130px 1fr;
   }
-}
-.header__decor {
-  position: absolute;
-  right: 20px;
-  top: 13px;
-  width: auto;
-  height: auto;
-  color: var(--accent-color);
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-@media (width >= 768px) {
-  .header__decor {
-    right: 30px;
-    top: 20px;
-  }
-}
-
-.header__decor::after {
-  content: "";
-  background-color: var(--accent-color);
-  width: 9px;
-  height: 9px;
-  flex: 0 0 9px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
 }
