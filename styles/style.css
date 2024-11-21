@@ -13,66 +13,13 @@
   background-size: cover;
 }
 
-h2 {
-  color: var(--section-title);
-  font-size: var(--text-size);
-  font-weight: bold;
-  line-height: var(--text-line-height);
-  margin-block-end: var(--margin-big);
-}
-
-h3 {
-  font-size: var(--text-size);
-  font-weight: bold;
-  line-height: var(--text-line-height);
-  margin-block-end: var(--margin-small);
-}
-
-.how__sub-header {
-  margin-block-end: var(--margin-big);
-}
-
-h4 {
-  font-size: var(--text-size);
-  font-weight: normal;
-  line-height: var(--text-line-height);
-  margin-block-end: var(--margin-small);
-}
-
 .br {
   display: block;
 }
 
-.section-padding {
-  padding: var(--section-padding);
-}
-
-.main__section:not(:last-of-type) {
-  margin-block-end: var(--main__section-mb);
-}
-
-.main__section li:not(:last-of-type) {
-  margin-block-end: var(--margin-big);
-}
-
-.section__link,
-.section__link:visited {
-  text-shadow: 2px 1px 0 var(--link-shadow-color);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.section__link:hover {
-  text-decoration: underline;
-}
-
-.section__link:focus-visible {
-  outline: 1px solid currentColor;
-}
-
 .header {
   min-block-size: var(--header-min-block-size);
-  /* block-size: 100vh; */
+  block-size: 100vh;
   padding: var(--header-padding);
   display: grid;
   grid-template-rows: var(--header-grid-rows);
@@ -234,6 +181,59 @@ h4 {
   padding: var(--content-padding);
 }
 
+h2 {
+  color: var(--section-title);
+  font-size: var(--text-size);
+  font-weight: bold;
+  line-height: var(--text-line-height);
+  margin-block-end: var(--margin-big);
+}
+
+h3 {
+  font-size: var(--text-size);
+  font-weight: bold;
+  line-height: var(--text-line-height);
+  margin-block-end: var(--margin-small);
+}
+
+.how__sub-header {
+  margin-block-end: var(--margin-big);
+}
+
+h4 {
+  font-size: var(--text-size);
+  font-weight: normal;
+  line-height: var(--text-line-height);
+  margin-block-end: var(--margin-small);
+}
+
+.section-padding {
+  padding: var(--section-padding);
+}
+
+.main__section:not(:last-of-type) {
+  margin-block-end: var(--main__section-mb);
+}
+
+.main__section li:not(:last-of-type) {
+  margin-block-end: var(--margin-big);
+}
+
+.section__link,
+.section__link:visited {
+  text-shadow: 2px 1px 0 var(--link-shadow-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section__link:hover {
+  text-decoration: underline;
+}
+
+.section__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .two-col {
   display: grid;
 }
@@ -321,5 +321,5 @@ h4 {
   align-items: center;
   justify-content: center;
   position: relative;
-  /* block-size: 100vh; */
+  block-size: 100vh;
 }
