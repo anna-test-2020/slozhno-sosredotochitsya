@@ -17,7 +17,11 @@
   --decorated-zone-gap: 10px;
   --section-padding: 0 10px;
   --main__section-mb: 50px;
-
+  --decorated-zone-size: 25px;
+  --margin-big: 20px;
+  --margin-small: 10px;
+  --gap-big: 20px;
+  --gap-small: 10px;
   /* цвета */
   --bg-color: #000028;
   --main-title-color: #db00ff;
