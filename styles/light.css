@@ -1,6 +1,7 @@
 .page.theme_light {
   --bg-color: #fff1f7;
   --main-title-color: #ffc2e6;
+  --main-title-shadow-color: #FF8DCB;
   --text-color: #353430;
   --accent-color: #ff0070;
   --title-decor-bg: #ff8dcb;
@@ -17,10 +18,17 @@
   display: none;
 }
 
+@media (width >= 1024px) {
+  .page.theme_light  {
+    --main-title-shadow-color: #FF0070;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff1f7;
     --main-title-color: #ffc2e6;
+    --main-title-shadow-color: #FF8DCB;
     --text-color: #353430;
     --accent-color: #ff0070;
     --title-decor-bg: #ff8dcb;
@@ -36,4 +44,11 @@
   .header__decor {
     display: none;
   }
+
+  @media (width >= 1024px) {
+    :root  {
+      --main-title-shadow-color: #FF0070;
+    }
+  }
+
 }

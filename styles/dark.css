@@ -1,6 +1,7 @@
 .page.theme_dark {
   --bg-color: #000028;
   --main-title-color: #db00ff;
+  --main-title-shadow-color: #ff0070;
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --border-coner-color: #ff0070;
@@ -21,6 +22,7 @@
   :root {
     --bg-color: #000028;
     --main-title-color: #db00ff;
+    --main-title-shadow-color: #ff0070;
     --text-color: #f1b2ce;
     --accent-color: #ff0070;
     --border-coner-color: #ff0070;
