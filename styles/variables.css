@@ -60,6 +60,5 @@
 @media (width >= 1024px) {
   :root {
     --min-block-size: 768px;
-    /* --header-grid-rows: 1fr 130px 1fr; */
   }
 }
