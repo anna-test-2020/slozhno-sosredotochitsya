@@ -236,7 +236,7 @@ h4 {
 }
 
 .section__link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid currentColor;
 }
 
 .section__link:focus-visible {
